@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Render Data</title>
+
+    <style>
+        h1{
+            color:red;
+        }
+        table, th, td {
+        border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Home</h1>
+    <div>
+        <table>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Time Created</th>
+              <th>Time Updated</th>
+            </tr>
+            <% for(let value of Data) { %>
+            <tr>
+   
+              <td><%= value.name %></td>
+              <td><%= value.age %></td>
+              <td><%= value.gender %></td>
+              <td><%= value.createdAt %></td>
+              <td><%= value.updatedAt %></td>
+      
+            </tr>
+            <% } %>
+          
+          </table>
+
+    </div>
+</body>
+</html>
